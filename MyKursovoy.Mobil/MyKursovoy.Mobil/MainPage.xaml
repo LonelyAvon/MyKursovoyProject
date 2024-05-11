@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyKursovoy.Mobil.MainPage"
+             Loaded="ContentPage_Loaded"
+             Shell.NavBarIsVisible="False"
+             >
+
+    <Grid ColumnDefinitions="20,1*,20"
+          RowDefinitions="20*,30*,320*,40*"
+          >
+        <Border Grid.ColumnSpan="3" Grid.RowSpan="2" BackgroundColor="#152B6F" Stroke="#152B6F"/>
+        <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="20">
+            <Label FontFamily="Syncopate-Cyr" Text="HOMETECH" TextColor="#FFD602" FontSize="36"/>
+        </VerticalStackLayout>
+
+
+        <ScrollView Grid.Row="2" Grid.Column="1">
+            <Grid
+                RowDefinitions="20,300,20,Auto">
+
+                <CarouselView x:Name="TypesCarouselView" Grid.Row="1" CurrentItemChanged="TypesCarouselView_CurrentItemChanged">
+
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10">
+                                <VerticalStackLayout Margin="0,15,0,0" Spacing="20">
+                                    <Image Source="{Binding PhotoPath}" HeightRequest="200"/>
+                                    <Label Text="{Binding Name}" HorizontalOptions="Center"  FontSize="20"/>
+                                </VerticalStackLayout>
+                             </Border>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <CollectionView x:Name="PopularItems"  Grid.Row="4" SelectionMode="Single" SelectionChanged="PopularItems_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10" Padding="10">
+                                <HorizontalStackLayout Spacing="20" >
+                                    <Image Source="{Binding Photoname}" BackgroundColor="#d9d9d9" MaximumHeightRequest="100"/>
+                                    <VerticalStackLayout Spacing="3">
+                                        <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" FontFamily=""/>
+                                        <Label LineBreakMode="WordWrap">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Описание: " FontAttributes="Bold" FontFamily=""/>
+                                                    <Span Text="{Binding ShortDescription}"/>
+                                                </FormattedString>
+
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Наличие: " FontAttributes="Bold" FontFamily=""/>
+                                                    <Span Text="{Binding Existance}"/>
+                                                </FormattedString>
+
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label >
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Цена: " FontAttributes="Bold" FontFamily=""/>
+                                                    <Span Text="{Binding Cost}" FontAttributes="Bold" FontFamily=""/>
+                                                    <Span Text=" ₽"/>
+                                                </FormattedString>
+
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+
+        </ScrollView>
+
+        <FlexLayout Grid.Row="3" Grid.ColumnSpan="3" BackgroundColor="#838383" JustifyContent="SpaceAround">
+            <ImageButton Source="home.png" MaximumHeightRequest="35" IsEnabled="False"/>
+            <ImageButton x:Name="ToCatalogButton" Clicked="ToCatalogButton_Clicked" Source="catalog.png" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToCartButton" Source="cart.png" MaximumHeightRequest="35" Clicked="ToCartButton_Clicked"/>
+            <ImageButton x:Name="ToProfileButton" Clicked="ToProfileButton_Clicked" Source="profile.png" MaximumHeightRequest="35"/>
+        </FlexLayout>
+    </Grid>
+
+</ContentPage>
+

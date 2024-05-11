@@ -1,0 +1,15 @@
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/bin/Debug/net8.0/MyKursovoy.Domain.deps.json
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/bin/Debug/net8.0/MyKursovoy.Domain.runtimeconfig.json
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/bin/Debug/net8.0/MyKursovoy.Domain.dll
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/bin/Debug/net8.0/MyKursovoy.Domain.pdb
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.csproj.AssemblyReference.cache
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.AssemblyInfoInputs.cache
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.AssemblyInfo.cs
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.csproj.CoreCompileInputs.cache
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.sourcelink.json
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.dll
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/refint/MyKursovoy.Domain.dll
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.pdb
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/MyKursovoy.Domain.genruntimeconfig.cache
+/Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Domain/obj/Debug/net8.0/ref/MyKursovoy.Domain.dll

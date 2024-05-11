@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{CFDF4EDF-1CE2-467C-BE66-349678B61E39}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MyKursovoy.Mobil PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A34CEE51-D0DB-4422-AB98-4B331396378E" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyKursovoy.Mobil/Pages/CartPage.xaml.cs">
+    <Files>
+      <File FileName="MyKursovoy.Mobil/MainPage.xaml.cs" />
+      <File FileName="MyKursovoy.Domain/Combiners/ProductCombiner.cs" />
+      <File FileName="MyKursovoy.Mobil/MainPage.xaml" Line="91" Column="1" />
+      <File FileName="MyKursovoy.Mobil/AppShell.xaml" />
+      <File FileName="MyKursovoy.Mobil/MauiProgram.cs" />
+      <File FileName="MyKursovoy.Mobil/IHelper.cs" />
+      <File FileName="MyKursovoy.Mobil/AppShell.xaml.cs" />
+      <File FileName="MyKursovoy.Mobil/App.xaml.cs" />
+      <File FileName="MyKursovoy.Mobil/Platforms/iOS/Program.cs" />
+      <File FileName="MyKursovoy.Domain/Combiners/TypeDTO.cs" />
+      <File FileName="MyKursovoy.Domain/Models/Typeoftechnic.cs" />
+      <File FileName="MyKursovoy.Domain/Models/Product.cs" />
+      <File FileName="MyKursovoy.Domain/Models/Productorder.cs" />
+      <File FileName="MyKursovoy.Mobil/Pages/CartPage.xaml" Line="94" Column="1" />
+      <File FileName="MyKursovoy.Mobil/Pages/CartPage.xaml.cs" Line="40" Column="39" />
+      <File FileName="MyKursovoy.Domain/Combiners/ProductParser.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyKursovoy.Mobil" expanded="True">
+            <Node name="MyKursovoy.Mobil">
+              <Node name="Pages" expanded="True">
+                <Node name="CartPage.xaml" expanded="True">
+                  <Node name="CartPage.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Platforms" expanded="True">
+                <Node name="iOS" expanded="True" />
+              </Node>
+              <Node name="Resources" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A34CEE51-D0DB-4422-AB98-4B331396378E" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

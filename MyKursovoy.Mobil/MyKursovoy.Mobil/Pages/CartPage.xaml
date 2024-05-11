@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyKursovoy.Mobil.Pages.CartPage"
+             Appearing="ContentPage_Appearing"
+             Shell.NavBarIsVisible="False"
+             Title="CartPage">
+    <Grid ColumnDefinitions="20,1*,20"
+          RowDefinitions="10*,35*,10*,20*,300*,20*,40*,20*,40*"
+          >
+
+        <Border Grid.ColumnSpan="3" Grid.RowSpan="3" BackgroundColor="#152B6F" Stroke="#152B6F"/>
+        <Label FontFamily="Syncopate-Cyr" VerticalOptions="EndAndExpand" Grid.Row="1" Grid.Column="1" Text="kopЗuha" TextColor="#FFD602" FontSize="36"/>
+
+
+        <VerticalStackLayout x:Name="Prop" Margin="40,0,40,0" Spacing="20" Grid.Row="4" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+            <Image Source="cart.png" HeightRequest="100"/>
+            <Label Text="В Корзине пока нет товаров"
+                   HorizontalTextAlignment="Center"
+                   FontSize="30"/>
+            <Label Text="Добавляйте понравившиеся товары и наслаждайтесь покупками"
+                   HorizontalTextAlignment="Center"
+                   FontSize="18"
+                   />
+        </VerticalStackLayout>
+        <VerticalStackLayout x:Name="PopStack" Grid.Row="4" Grid.Column="1" Spacing="20" IsVisible="Hidden">
+        <Label Text="ТОВАРЫ" FontFamily="Syncopate-Cyr" FontSize="20"/>
+        <CollectionView x:Name="PopularItems" MaximumHeightRequest="450"  SelectionMode="Single">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"  VerticalItemSpacing="20"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10" Padding="10">
+                                <HorizontalStackLayout Spacing="20" >
+                                    <Image Source="{Binding Photoname}" BackgroundColor="#d9d9d9" MaximumHeightRequest="100"/>
+                                    <VerticalStackLayout Spacing="3">
+                                        <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" FontFamily=""/>
+                                        <Label LineBreakMode="WordWrap">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Описание: " FontAttributes="Bold" FontFamily=""/>
+                                                    <Span Text="{Binding ShortDescription}"/>
+                                                </FormattedString>
+
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label>
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Наличие: " FontAttributes="Bold" FontFamily=""/>
+                                                    <Span Text="{Binding Existance}" />
+                                                </FormattedString>
+
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label >
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Цена: " FontAttributes="Bold" FontFamily=""/>
+                                                    <Span Text="{Binding Cost}" FontAttributes="Bold" FontFamily=""/>
+                                                    <Span Text=" ₽"/>
+                                                </FormattedString>
+
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            <Label >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="ИТОГО: " FontFamily="Syncopate-Cyr" FontSize="18"/>
+                        <Span x:Name="ResultMoney" FontFamily="Syncopate-Cyr"/>
+                        <Span Text=" ₽" FontFamily="Syncopate-Cyr"/>
+                    </FormattedString>
+
+                </Label.FormattedText>
+            </Label>
+            </VerticalStackLayout>
+
+            <Button IsVisible="False" x:Name="DeleteCart" Clicked="DeleteCart_Clicked" Grid.Row="6" Grid.Column="1" Text="ОЧИСТИТЬ КОРЗИНУ" FontFamily="Syncopate-Cyr" TextColor="#FFD602" FontSize="20" BackgroundColor="#152B6F"/>
+
+         <FlexLayout Grid.Row="8" Grid.ColumnSpan="3" BackgroundColor="#838383" JustifyContent="SpaceAround">
+            <ImageButton x:Name="ToHomePage" Source="home.png" Clicked="ToHomePage_Clicked" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToCatalogPage"  Clicked="ToCatalogPage_Clicked" Source="catalog.png" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToCartButton" IsEnabled="False" Clicked="ToCartButton_Clicked" Source="cart.png" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToProfilePage" Clicked="ToProfilePage_Clicked" Source="profile.png" MaximumHeightRequest="35"/>
+        </FlexLayout>
+
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyKursovoy.Mobil.Pages.ProductPage"
+             Shell.NavBarIsVisible="False"
+             Title="ProductPage">
+    <Grid ColumnDefinitions="20,1*,20"
+          RowDefinitions="10*,35*,10*,60*,200*,50*,Auto,20*,50*,40*"
+          >
+
+        <Border Grid.ColumnSpan="3" Grid.RowSpan="3" BackgroundColor="#152B6F" Stroke="#152B6F"/>
+        <ImageButton x:Name="Back" Clicked="Back_Clicked" Grid.Row="1" Grid.Column="1" Source="back.png" HorizontalOptions="StartAndExpand" MaximumHeightRequest="30" MaximumWidthRequest="30"/>
+        <Label FontFamily="Syncopate-Cyr" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="1" Text="ТОВАР" TextColor="#FFD602" FontSize="36"/>
+
+        <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="StartAndExpand" Text="{Binding Name}"
+               FontFamily="Syncopate" FontSize="24"
+               VerticalOptions="CenterAndExpand"/>
+
+        <Border Grid.Row="4" Grid.Column="1" BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10" Padding="40">
+            <Image Source="{Binding Photoname}" />
+        </Border>
+
+        <Label FontSize="20" Grid.Row="5" Grid.Column="1" VerticalOptions="CenterAndExpand">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding Cost}" FontFamily="Syncopate-Cyr"/>
+                    <Span Text=" ₽" FontFamily="Syncopate-Cyr"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <VerticalStackLayout Grid.Row="6" Grid.Column="1" Spacing="20">
+            <HorizontalStackLayout>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="НАЗВАНИЕ: " FontFamily="Syncopate-Cyr"/>
+                            <Span Text="{Binding Name}" FontSize="18"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label LineBreakMode="WordWrap"
+                       MaximumWidthRequest="400">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="ОПИСАНИЕ: " FontFamily="Syncopate-Cyr"/>
+                            <Span Text="{Binding Description}" FontSize="18"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </HorizontalStackLayout>
+             <HorizontalStackLayout>
+                <Label LineBreakMode="WordWrap"
+                       MaximumWidthRequest="400">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="НАЛИЧИЕ: " FontFamily="Syncopate-Cyr"/>
+                            <Span Text="{Binding Existance}" FontSize="18"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Button x:Name="AddToCart" Clicked="AddToCart_Clicked" Grid.Row="8" Grid.Column="1" Text="В КОРЗИНУ" FontFamily="Syncopate-Cyr" BackgroundColor="#152B6F" TextColor="#FFD602" HorizontalOptions="CenterAndExpand"/>
+
+    </Grid>
+</ContentPage>

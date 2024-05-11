@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyKursovoy.Mobil.Pages.ProfilePage"
+             Shell.NavBarIsVisible="False"
+             Appearing="ContentPage_Appearing"
+             Title="ProfilePage">
+     <Grid ColumnDefinitions="20,1*,20"
+          RowDefinitions="10*,35*,20*,20*,330*,40*,40*,45*"
+          >
+
+        <Border Grid.ColumnSpan="3" Grid.RowSpan="3" BackgroundColor="#152B6F" Stroke="#152B6F"/>
+        <Label FontFamily="Syncopate-Cyr" VerticalOptions="EndAndExpand" Grid.Row="1" Grid.Column="1" Text="ПpОФИЛЬ" TextColor="#FFD602" FontSize="36"/>
+
+         <VerticalStackLayout Grid.Row="4" Grid.Column="1" Spacing="30">
+
+             <VerticalStackLayout Spacing="10">
+                 <Label Text="ФАМИЛИЯ" FontSize="20" FontFamily="Syncopate-Cyr"/>
+                 <Entry x:Name="SurnameTextBox" Text="{Binding Surname}" FontSize="18" Placeholder="Введите фамилию"/>
+             </VerticalStackLayout>
+             <VerticalStackLayout Spacing="10">
+                 <Label Text="ИМЯ" FontSize="20" FontFamily="Syncopate-Cyr"/>
+                 <Entry x:Name="NameTextBox" Text="{Binding Name}" FontSize="18" Placeholder="Введите имя"/>
+             </VerticalStackLayout>
+              <VerticalStackLayout Spacing="10">
+                 <Label Text="ОТЧЕСТВО" FontSize="20" FontFamily="Syncopate-Cyr"/>
+                 <Entry x:Name="PatronymicTextBox" Text="{Binding Patronymic}" FontSize="18" Placeholder="Введите отчество"/>
+             </VerticalStackLayout>
+              <VerticalStackLayout Spacing="10">
+                 <Label Text="НОМЕР ТЕЛЕФОНА" FontSize="20" FontFamily="Syncopate-Cyr"/>
+                 <Entry x:Name="PhoneTextBox" Text="{Binding Phone}" FontSize="18" Placeholder="Введите номер телефона" MaxLength="11"/>
+             </VerticalStackLayout>
+         </VerticalStackLayout>
+
+         <Button x:Name="UpdateUserButton" Clicked="UpdateUserButton_Clicked" Grid.Row="5" Grid.Column="1" HorizontalOptions="CenterAndExpand"
+                 BackgroundColor="#152B6F" TextColor="#FFD602" Text="ОБНОВИТЬ" FontFamily="Syncopate-Cyr" Padding="40"/>
+
+
+         <FlexLayout Grid.Row="7" Grid.ColumnSpan="3" BackgroundColor="#838383" JustifyContent="SpaceAround">
+            <ImageButton x:Name="ToHomePage" Source="home.png" Clicked="ToHomePage_Clicked" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToCatalogPage" Clicked="ToCatalogPage_Clicked" Source="catalog.png" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToCartButton" Clicked="ToCartButton_Clicked" Source="cart.png" MaximumHeightRequest="35"/>
+            <ImageButton Source="profile.png" IsEnabled="False" MaximumHeightRequest="35"/>
+        </FlexLayout>
+
+     </Grid>
+</ContentPage>

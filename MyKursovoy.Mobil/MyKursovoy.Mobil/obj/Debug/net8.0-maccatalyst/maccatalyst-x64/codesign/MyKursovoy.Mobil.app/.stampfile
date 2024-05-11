@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Mobil/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/Entitlements.xcent /Users/user/Projects/MyKursovoy/MyKursovoy.Mobil/MyKursovoy.Mobil/bin/Debug/net8.0-maccatalyst/maccatalyst-x64/MyKursovoy.Mobil.app

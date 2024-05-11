@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyKursovoy.Mobil.Pages.CatalogPage"
+             Title="CatalogPage"
+             Shell.NavBarIsVisible="False"
+             Loaded="ContentPage_Loaded"
+             >
+    <Grid ColumnDefinitions="20,1*,20"
+          RowDefinitions="10*,35*,10*,40*,10*,330*,40*,40*"
+          >
+
+        <Border Grid.ColumnSpan="3" Grid.RowSpan="4" BackgroundColor="#152B6F" Stroke="#152B6F"/>
+        <Label FontFamily="Syncopate-Cyr" VerticalOptions="EndAndExpand" Grid.Row="1" Grid.Column="1" Text="kataЛoГ" TextColor="#FFD602" FontSize="36"/>
+        <VerticalStackLayout Grid.Row="3" Grid.Column="1">
+        <Border Stroke="White" BackgroundColor="White"  StrokeShape="RoundRectangle 10,10,10,10" Padding="4">
+                <Grid ColumnDefinitions="0.8*,10*">
+                    <Image Source="search.png" Grid.Column="0"/>
+                    <Entry x:Name="SearchTextBox" Grid.Column="1" HorizontalOptions="Fill" BackgroundColor="White" Placeholder="Искать на Hometech" PlaceholderColor="DarkGrey" />
+                </Grid>
+             </Border>
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout x:Name="Categories" Grid.Row="5" Grid.Column="1" Spacing="10">
+            <Label  Text="КАТЕГОРИИ" FontSize="24" FontFamily="Syncopate-Cyr" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+            <CollectionView x:Name="CategoreisCollectionView" SelectionMode="Single">
+                 <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10" Padding="20">
+                            <Label Text="{Binding Name}" FontSize="20"/>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+        
+        <FlexLayout Grid.Row="7" Grid.ColumnSpan="3" BackgroundColor="#838383" JustifyContent="SpaceAround">
+            <ImageButton x:Name="ToHomeButton" Clicked="ToHomeButton_Clicked" Source="home.png" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToCatalogButton" Clicked="ToCatalogButton_Clicked" IsEnabled="False"  Source="catalog.png" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToCartButton" Clicked="ToCartButton_Clicked" Source="cart.png" MaximumHeightRequest="35"/>
+            <ImageButton x:Name="ToProfileButton" Clicked="ToProfileButton_Clicked" Source="profile.png" MaximumHeightRequest="35"/>
+        </FlexLayout>
+    </Grid>
+</ContentPage>
