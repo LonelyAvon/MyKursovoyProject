@@ -12,6 +12,11 @@ public partial class ProductPage : ContentPage
 		InitializeComponent();
 		_product = product;
 		BindingContext = _product;
+
+		if(_product.Existance == "Не в наличии")
+		{
+			AddToCart.IsEnabled = false;
+		}
 	}
 
     async void Back_Clicked(System.Object sender, System.EventArgs e)

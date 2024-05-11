@@ -19,11 +19,15 @@
             <Grid
                 RowDefinitions="20,300,20,Auto">
 
-                <CarouselView x:Name="TypesCarouselView" Grid.Row="1" CurrentItemChanged="TypesCarouselView_CurrentItemChanged">
+                <CarouselView x:Name="TypesCarouselView" Grid.Row="1">
 
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Border BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer x:Name="CarouselItemSelected" Tapped="CarouselItemSelected_Tapped"/>
+
+                                </Border.GestureRecognizers>
                                 <VerticalStackLayout Margin="0,15,0,0" Spacing="20">
                                     <Image Source="{Binding PhotoPath}" HeightRequest="200"/>
                                     <Label Text="{Binding Name}" HorizontalOptions="Center"  FontSize="20"/>

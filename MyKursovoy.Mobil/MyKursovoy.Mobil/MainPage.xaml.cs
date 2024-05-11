@@ -63,12 +63,6 @@ public partial class MainPage : ContentPage
         }
 
     }
-
-    async void TypesCarouselView_CurrentItemChanged(System.Object sender, Microsoft.Maui.Controls.CurrentItemChangedEventArgs e)
-    {
-
-    }
-
     async void ToCartButton_Clicked(System.Object sender, System.EventArgs e)
     {
 
@@ -90,6 +84,12 @@ public partial class MainPage : ContentPage
 		var item = PopularItems.SelectedItem as ProductCombiner;
 
 		await Navigation.PushAsync(new ProductPage(item));
+    }
+
+    async void CarouselItemSelected_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    {
+        var item = TypesCarouselView.CurrentItem as Typeoftechnic;
+        await Navigation.PushAsync(new CatalogPage(item.Name));
     }
 }
 

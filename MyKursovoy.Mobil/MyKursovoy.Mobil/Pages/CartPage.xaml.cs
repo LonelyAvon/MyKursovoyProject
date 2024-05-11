@@ -84,4 +84,11 @@ public partial class CartPage : ContentPage
             DeleteCart.IsVisible = false;
         }
     }
+
+    async void PopularItems_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+    {
+        var item = PopularItems.SelectedItem as ProductCombiner;
+
+        await Navigation.PushAsync(new ProductPage(item));
+    }
 }

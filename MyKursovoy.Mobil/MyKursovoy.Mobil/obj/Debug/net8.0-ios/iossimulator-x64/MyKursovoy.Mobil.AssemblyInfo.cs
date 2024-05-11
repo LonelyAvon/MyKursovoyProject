@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyKursovoy.Mobil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+444c464d906204365578f77a2cc5d725ee2a15da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+bdca30dc2c3d34fe2f922f031b7511aa3aad1796")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyKursovoy.Mobil")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyKursovoy.Mobil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,6 +8,7 @@ namespace MyKursovoy.Domain.Combiners
         public int? Brandname { get; set; }
 
         public int? Typeoftechnic { get; set; }
+        public string? Type { get; set; }
 
         public string? Name { get; set; }
 

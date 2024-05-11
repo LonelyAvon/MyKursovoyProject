@@ -7,7 +7,7 @@
              Loaded="ContentPage_Loaded"
              >
     <Grid ColumnDefinitions="20,1*,20"
-          RowDefinitions="10*,35*,10*,40*,10*,330*,40*,40*"
+          RowDefinitions="10*,35*,10*,50*,10*,20*,330*,40*,40*"
           >
 
         <Border Grid.ColumnSpan="3" Grid.RowSpan="4" BackgroundColor="#152B6F" Stroke="#152B6F"/>
@@ -16,29 +16,74 @@
         <Border Stroke="White" BackgroundColor="White"  StrokeShape="RoundRectangle 10,10,10,10" Padding="4">
                 <Grid ColumnDefinitions="0.8*,10*">
                     <Image Source="search.png" Grid.Column="0"/>
-                    <Entry x:Name="SearchTextBox" Grid.Column="1" HorizontalOptions="Fill" BackgroundColor="White" Placeholder="Искать на Hometech" PlaceholderColor="DarkGrey" />
+                    <Entry x:Name="SearchTextBox" TextChanged="SearchTextBox_TextChanged" Grid.Column="1" HorizontalOptions="Fill" BackgroundColor="White" Placeholder="Искать на Hometech" PlaceholderColor="DarkGrey" />
                 </Grid>
              </Border>
         </VerticalStackLayout>
 
 
-        <VerticalStackLayout x:Name="Categories" Grid.Row="5" Grid.Column="1" Spacing="10">
-            <Label  Text="КАТЕГОРИИ" FontSize="24" FontFamily="Syncopate-Cyr" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
-            <CollectionView x:Name="CategoreisCollectionView" SelectionMode="Single">
-                 <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10"/>
-                    </CollectionView.ItemsLayout>
+        <Label x:Name="CategoriesLabel" Text="КАТЕГОРИИ" FontSize="24" Grid.Row="5" Grid.Column="1" FontFamily="Syncopate-Cyr" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+        <CollectionView x:Name="CategoreisCollectionView" Grid.Row="6" Grid.Column="1" SelectionMode="Single" SelectionChanged="CategoreisCollectionView_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10" Padding="20">
+                        <Label Text="{Binding Name}" FontSize="20"/>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+        <CollectionView x:Name="PopularItems"  Grid.Row="6" Grid.Column="1" IsVisible="Hidden" SelectionMode="Single" SelectionChanged="PopularItems_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20"/>
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Border BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10" Padding="20">
-                            <Label Text="{Binding Name}" FontSize="20"/>
+                        <Border BackgroundColor="#d9d9d9" StrokeShape="RoundRectangle 10,10,10,10" Padding="10">
+                            <HorizontalStackLayout Spacing="20" >
+                                <Image Source="{Binding Photoname}" BackgroundColor="#d9d9d9" MaximumHeightRequest="100"/>
+                                <VerticalStackLayout Spacing="3">
+                                    <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" FontFamily=""/>
+                                    <Label LineBreakMode="WordWrap">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Описание: " FontAttributes="Bold" FontFamily=""/>
+                                                <Span Text="{Binding ShortDescription}"/>
+                                            </FormattedString>
+
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label>
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Наличие: " FontAttributes="Bold" FontFamily=""/>
+                                                <Span Text="{Binding Existance}"/>
+                                            </FormattedString>
+
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label >
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Цена: " FontAttributes="Bold" FontFamily=""/>
+                                                <Span Text="{Binding Cost}" FontAttributes="Bold" FontFamily=""/>
+                                                <Span Text=" ₽"/>
+                                            </FormattedString>
+
+                                        </Label.FormattedText>
+                                    </Label>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </VerticalStackLayout>
-        
-        <FlexLayout Grid.Row="7" Grid.ColumnSpan="3" BackgroundColor="#838383" JustifyContent="SpaceAround">
+
+        <FlexLayout Grid.Row="8" Grid.ColumnSpan="3" BackgroundColor="#838383" JustifyContent="SpaceAround">
             <ImageButton x:Name="ToHomeButton" Clicked="ToHomeButton_Clicked" Source="home.png" MaximumHeightRequest="35"/>
             <ImageButton x:Name="ToCatalogButton" Clicked="ToCatalogButton_Clicked" IsEnabled="False"  Source="catalog.png" MaximumHeightRequest="35"/>
             <ImageButton x:Name="ToCartButton" Clicked="ToCartButton_Clicked" Source="cart.png" MaximumHeightRequest="35"/>

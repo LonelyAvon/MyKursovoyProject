@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>MyKursovoy.Mobil</ApplicationTitle>
+		<ApplicationTitle>HomeTech</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.mykursovoy.mobil</ApplicationId>
@@ -43,7 +43,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\hometech.svg" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -63,6 +63,7 @@
 		<MauiImage Include="Resources\Images\Buttons\home.svg" />
 		<MauiImage Include="Resources\Images\Buttons\profile.svg" />
 		<MauiImage Include="Resources\Images\Buttons\back.svg" />
+		<MauiIcon Include="Resources\AppIcon\hometech.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -121,6 +122,15 @@
 	  <None Remove="Resources\Images\Micro\bosch_bfl634gb1.png" />
 	  <None Remove="Resources\Images\Micro\kuppersberg_hmw650w.png" />
 	  <None Remove="Resources\Images\Micro\smeg_fmi320x2_classica.png" />
+	  <None Remove="Resources\Images\CardPhotos\bosch_pnh6b6b90.png" />
+	  <None Remove="Resources\Images\CardPhotos\kuppersberg_hmw650w.png" />
+	  <None Remove="Resources\Images\Cookers\" />
+	  <None Remove="Resources\Images\Cookers\kuppersbusch_cbp6550_0_w4.png" />
+	  <None Remove="Resources\Images\Cookers\bosch_hba534es0.png" />
+	  <None Remove="Resources\Images\Cookers\smeg_so6302s3px.png" />
+	  <None Remove="Resources\Images\CardPhotos\micro.png" />
+	  <None Remove="Resources\Images\CardPhotos\warmpanel.png" />
+	  <None Remove="Resources\AppIcon\photo.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Resources\Images\Buttons\" />
@@ -132,6 +142,7 @@
 	  <Folder Include="Resources\Images\Wash\" />
 	  <Folder Include="Resources\Images\WarmPanels\" />
 	  <Folder Include="Resources\Images\Micro\" />
+	  <Folder Include="Resources\Images\Cookers\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\CardPhotos\kofee.png" />
@@ -162,5 +173,12 @@
 	  <BundleResource Include="Resources\Images\Micro\bosch_bfl634gb1.png" />
 	  <BundleResource Include="Resources\Images\Micro\kuppersberg_hmw650w.png" />
 	  <BundleResource Include="Resources\Images\Micro\smeg_fmi320x2_classica.png" />
+	  <BundleResource Include="Resources\Images\CardPhotos\warmpanel.png" />
+	  <BundleResource Include="Resources\Images\CardPhotos\micro.png" />
+	  <BundleResource Include="Resources\Images\Cookers\kuppersbusch_cbp6550_0_w4.png" />
+	  <BundleResource Include="Resources\Images\Cookers\bosch_hba534es0.png" />
+	  <BundleResource Include="Resources\Images\Cookers\smeg_so6302s3px.png" />
+	  <BundleResource Include="Resources\Images\CardPhotos\micro.png" />
+	  <BundleResource Include="Resources\Images\CardPhotos\warmpanel.png" />
 	</ItemGroup>
 </Project>
